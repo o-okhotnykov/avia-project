@@ -1,0 +1,23 @@
+@import '@/style/global'
+
+.airline-item
+    display: flex
+    flex-direction: column
+    background-color: $white
+    margin: 18px 0 22px 0
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    padding: 20px
+
+.airline-item__flights
+    display: flex
+    flex-direction: column
+    width: 100%
+
+.airline-item__info
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.airline-item__price
+    @include text(24px,$primary,600)

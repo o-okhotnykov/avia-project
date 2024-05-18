@@ -1,0 +1,27 @@
+@import '@/style/global'
+
+.sort__option
+    cursor: pointer
+    width: 168px
+    @include text(13px,$primaryText,400)
+    letter-spacing: .5px
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid $border
+
+    &:first-child
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+
+    &:last-child
+        border-top-right-radius: 10px
+        border-bottom-right-radius: 10px
+
+    &:hover
+        box-shadow: $boxShadow
+
+.sort__option--checked
+    background-color: $primary
+    color: $whiteText

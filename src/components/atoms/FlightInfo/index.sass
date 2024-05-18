@@ -1,0 +1,20 @@
+@import '@/style/global'
+
+.flight-info
+    display: flex
+    justify-content: space-between
+    margin-top: 10px
+
+.flight-info__block
+    display: flex
+    flex-direction: column
+
+.flight-info__title
+    @include text(12px,$secondaryText,600)
+    text-transform: uppercase
+    letter-spacing: .5px
+    line-height: 18px
+
+.flight-info__subtitle
+    @include text(14px,$primaryText,600)
+    line-height: 21px
