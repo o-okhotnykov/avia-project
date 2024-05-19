@@ -27,7 +27,3 @@ type Duration = {
   minutes: number;
 };
 
-export type GetProjectsParams = {
-  page?: number;
-  limit?: number;
-};

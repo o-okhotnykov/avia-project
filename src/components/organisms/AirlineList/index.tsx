@@ -1,24 +1,25 @@
+import { useState } from "react";
+import { useGetAirlinesQuery } from "@/store/airline-api";
 import { AirlineItem } from "@/components/molecules/AirlineItem";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { airlineDataSelector, getAirlinesAsync } from "@/store/airlines-slice";
-import { AppDispatch } from "@/store/root-store";
+import { LoadMoreButton } from "@/components/atoms/LoadMoreButton";
 import "./index.sass";
 
 export const AirlineList = () => {
-  const dispatch = useDispatch<AppDispatch>();
+  const [page, setPage] = useState(1);
+  const { data } = useGetAirlinesQuery(page);
+  const airlineData = data?.data ?? [];
+  const lastPage = data?.last ?? 1;
 
-  useEffect(() => {
-    dispatch(getAirlinesAsync({ page: 1, limit: 10 }));
-  }, []);
-
-  const airlineData = useSelector(airlineDataSelector);
+  const handleClick = () => {
+    setPage((prev) => prev + 1);
+  };
 
   return (
     <main className="airline-list">
-      {airlineData.map((item) => (
+      {airlineData?.map((item) => (
         <AirlineItem key={item.id} data={item} />
       ))}
+      {lastPage !== page && <LoadMoreButton handleClick={handleClick} />}
     </main>
   );
 };
