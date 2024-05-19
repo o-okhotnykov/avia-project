@@ -1,84 +1,22 @@
 import { AirlineItem } from "@/components/molecules/AirlineItem";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { airlineDataSelector, getAirlinesAsync } from "@/store/airlines-slice";
+import { AppDispatch } from "@/store/root-store";
 import "./index.sass";
 
-const AirlineData = [
-  {
-    id: 1,
-    airline: "AIRLINE FOR EUROPE",
-    origin: "LHR",
-    destination: "DXB",
-    currency: "USD",
-    flights: [
-      {
-        id: 11,
-        origin: "LHR",
-        destination: "DXB",
-        departure: "10:45",
-        arrival: "08:00",
-        duration: {
-          hours: 34,
-          minutes: 15,
-        },
-        transfers: [{ airport: "HKG" }],
-        price: 6650,
-      },
-      {
-        id: 21,
-        origin: "DXB",
-        destination: "LHR",
-        departure: "11:20",
-        arrival: "00:50",
-        duration: {
-          hours: 16,
-          minutes: 30,
-        },
-        transfers: [{ airport: "HKG" }],
-        price: 6650,
-      },
-    ],
-  },
-  {
-    id: 2,
-    airline: "AIRLINE FOR EUROPE",
-    logo: "@/assets/main-logo.svg",
-    origin: "LHR",
-    destination: "DXB",
-    currency: "USD",
-    flights: [
-      {
-        id: 12,
-        origin: "LHR",
-        destination: "DXB",
-        departure: "10:45",
-        arrival: "08:00",
-        duration: {
-          hours: 17,
-          minutes: 15,
-        },
-        transfers: [{ airport: "HKG" }, { airport: "JNB" }],
-        price: 7550,
-      },
-      {
-        id: 22,
-        origin: "DXB",
-        destination: "LHR",
-        departure: "11:20",
-        arrival: "00:50",
-        duration: {
-          hours: 40,
-          minutes: 30,
-        },
-        transfers: [{ airport: "HKG" }, { airport: "JNB" }],
-        price: 7550,
-      },
-    ],
-  },
-];
-
 export const AirlineList = () => {
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    dispatch(getAirlinesAsync({ page: 1, limit: 10 }));
+  }, []);
+
+  const airlineData = useSelector(airlineDataSelector);
+
   return (
     <main className="airline-list">
-      {AirlineData.map((item) => (
+      {airlineData.map((item) => (
         <AirlineItem key={item.id} data={item} />
       ))}
     </main>

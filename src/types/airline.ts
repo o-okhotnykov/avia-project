@@ -26,3 +26,8 @@ type Duration = {
   hours: number;
   minutes: number;
 };
+
+export type GetProjectsParams = {
+  page?: number;
+  limit?: number;
+};

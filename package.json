@@ -1,5 +1,6 @@
 {
   "name": "avia-project",
+  "homepage": "http://o-okhotnykov.github.io/avia-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,10 +8,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "server": "npx json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
+    "axios": "^1.6.8",
     "json-server": "^1.0.0-beta.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
