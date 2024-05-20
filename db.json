@@ -209,7 +209,7 @@
             "destination": "DXB",
             "currency": "USD",
             "totalSum": 23900,
-            "totalTime": 20.45,
+            "totalTime": 109.45,
             "flights": [
                 {
                     "id": 51,
@@ -218,7 +218,7 @@
                     "departure": "10:45",
                     "arrival": "08:00",
                     "duration": {
-                        "hours": 11,
+                        "hours": 100,
                         "minutes": 15
                     },
                     "transfers": [
@@ -263,6 +263,9 @@
                         "minutes": 15
                     },
                     "transfers": [
+                        {
+                            "airport": "HKG"
+                        },
                         {
                             "airport": "HKG"
                         }
@@ -691,7 +694,7 @@
             "destination": "DXB",
             "currency": "USD",
             "totalSum": 23900,
-            "totalTime": 20.45,
+            "totalTime": 109.45,
             "flights": [
                 {
                     "id": 151,
@@ -700,7 +703,7 @@
                     "departure": "10:45",
                     "arrival": "08:00",
                     "duration": {
-                        "hours": 11,
+                        "hours": 100,
                         "minutes": 15
                     },
                     "transfers": [],

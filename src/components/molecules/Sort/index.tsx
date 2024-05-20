@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { SortOption } from "../../atoms/SortOption";
 import { SortValue, changeSort, sortOptionsSelector } from "@/store/sort-slice";
-import "./index.sass";
 import { applySort } from "@/store/airline-slice";
+import "./index.sass";
 
 export const Sort = () => {
   const sortOptions = useSelector(sortOptionsSelector);
