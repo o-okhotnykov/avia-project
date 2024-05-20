@@ -1,10 +1,10 @@
-import { filterValue } from "@/store/filter-slice";
+import { FilterValue } from "@/store/filter-slice";
 import "./index.sass";
 
 interface FilterOption {
   title: string;
   checked: boolean;
-  value: filterValue;
+  value: FilterValue;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
