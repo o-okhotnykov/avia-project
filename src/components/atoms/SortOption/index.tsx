@@ -8,13 +8,16 @@ interface SortOptionProps {
 
 export const SortOption = ({ title, checked, onClick }: SortOptionProps) => {
   return (
-    <li
-      className={
-        checked ? "sort__option sort__option--checked" : "sort__option"
-      }
-      onClick={onClick}
-    >
-      {title}
+    <li className="sort__option">
+      <button
+        type="button"
+        onClick={onClick}
+        className={
+          checked ? "sort__btn sort__btn--checked" : "sort__btn"
+        }
+      >
+        {title}
+      </button>
     </li>
   );
 };
