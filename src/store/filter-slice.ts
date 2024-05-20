@@ -1,7 +1,7 @@
 import { createSlice, createSelector, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./root-store";
 
-export enum filterValue {
+export enum FilterValue {
   all = "all",
   noTransfer = "noTransfer",
   oneTransfer = "oneTransfer",
@@ -12,15 +12,15 @@ export enum filterValue {
 export interface IFilter {
   title: string;
   checked: boolean;
-  value: filterValue;
+  value: FilterValue;
 }
 
 const initialState = [
-  { title: "Всі", checked: true, value: filterValue.all },
-  { title: "Без пересадок", checked: false, value: filterValue.noTransfer },
-  { title: "1 пересадка", checked: false, value: filterValue.oneTransfer },
-  { title: "2 пересадки", checked: false, value: filterValue.twoTransfer },
-  { title: "3 пересадки", checked: false, value: filterValue.threeTransfer },
+  { title: "Всі", checked: true, value: FilterValue.all },
+  { title: "Без пересадок", checked: false, value: FilterValue.noTransfer },
+  { title: "1 пересадка", checked: false, value: FilterValue.oneTransfer },
+  { title: "2 пересадки", checked: false, value: FilterValue.twoTransfer },
+  { title: "3 пересадки", checked: false, value: FilterValue.threeTransfer },
 ];
 
 export const filterSlice = createSlice({
@@ -48,5 +48,15 @@ export const filterOptionsSelector = createSelector(
   (state) => state
 );
 
+export const currentFilterOptionSelector = createSelector(
+  filterSelector,
+  (state: IFilter[]): IFilter => {
+    if (!state.find((item) => item.checked)) {
+      return state[0];
+    } else {
+      return state.find((item) => item.checked)!;
+    }
+  }
+);
 
 export const filterReducer = filterSlice.reducer;

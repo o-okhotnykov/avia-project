@@ -18,7 +18,7 @@ export const FilterOption = ({
     <li className="filter__option">
       <input
         name={title}
-        type="checkbox"
+        type="radio"
         checked={checked}
         value={value}
         className={
