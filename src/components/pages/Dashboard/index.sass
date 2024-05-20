@@ -1,6 +1,21 @@
+@import '@/style/global'
+
 .container
     display: grid
     grid-template-areas: "header header" "filter sort" "filter content"
-    grid-template-columns: 232px 502px
+    grid-template-columns: 232px minmax(502px, 1fr)
     grid-gap: 0px 39px
     margin-bottom: 25px
+    justify-content: center
+    box-sizing: border-box
+
+@media only screen and (max-width: $tablet-width)
+    .container
+        grid-template-columns: 0.7fr 1fr
+
+@media only screen and (max-width: $mobile-width)
+    .container
+        margin: 5px
+        grid-template-areas: "header" "filter" "sort" "content"
+        grid-gap: 10px
+        grid-template-columns: 1fr

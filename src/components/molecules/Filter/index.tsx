@@ -1,7 +1,7 @@
 import { FilterOption } from "@/components/atoms/FilterOption";
-import "./index.sass";
 import { useDispatch, useSelector } from "react-redux";
 import { changeFilter, filterSelector } from "@/store/filter-slice";
+import "./index.sass";
 
 export const Filter = () => {
   const filterOptions = useSelector(filterSelector);

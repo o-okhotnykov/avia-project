@@ -22,6 +22,7 @@ export const AirlineList = () => {
     const airlineData = data?.data ?? [];
     const filteredAirlines = airlineFilter(airlineData, currentFilter.value);
     const sortedAirlines = airlineSort(filteredAirlines, currentSort.value);
+    
     if (sortedAirlines.length === 0) {
       setPage((prev) => prev + 1);
     }
