@@ -17,7 +17,7 @@ export interface IFilter {
 
 const initialState = [
   { title: "Всі", checked: true, value: filterValue.all },
-  { title: "Без пересадок", checked: true, value: filterValue.noTransfer },
+  { title: "Без пересадок", checked: false, value: filterValue.noTransfer },
   { title: "1 пересадка", checked: false, value: filterValue.oneTransfer },
   { title: "2 пересадки", checked: false, value: filterValue.twoTransfer },
   { title: "3 пересадки", checked: false, value: filterValue.threeTransfer },
@@ -29,6 +29,7 @@ export const filterSlice = createSlice({
   reducers: {
     changeFilter(state: IFilter[], action: PayloadAction<string>) {
       state = state.map((item) => {
+        item.checked = false;
         if (item.value === action.payload) {
           item.checked = !item.checked;
         }
@@ -42,9 +43,10 @@ export const { changeFilter } = filterSlice.actions;
 
 export const filterSelector = (state: RootState): IFilter[] => state.filter;
 
-export const sortOptionsSelector = createSelector(
+export const filterOptionsSelector = createSelector(
   filterSelector,
   (state) => state
 );
+
 
 export const filterReducer = filterSlice.reducer;

@@ -6,6 +6,8 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 13300,
+            "totalTime": 51,
             "flights": [
                 {
                     "id": 11,
@@ -50,6 +52,8 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 15100,
+            "totalTime": 57.45,
             "flights": [
                 {
                     "id": 21,
@@ -100,6 +104,8 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 15400,
+            "totalTime": 33.45,
             "flights": [
                 {
                     "id": 31,
@@ -144,6 +150,8 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 21400,
+            "totalTime": 34.45,
             "flights": [
                 {
                     "id": 41,
@@ -200,6 +208,8 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 23900,
+            "totalTime": 20.45,
             "flights": [
                 {
                     "id": 51,
@@ -211,7 +221,11 @@
                         "hours": 11,
                         "minutes": 15
                     },
-                    "transfers": [],
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
                     "price": 11950
                 },
                 {
@@ -235,6 +249,8 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 10300,
+            "totalTime": 21.45,
             "flights": [
                 {
                     "id": 61,
@@ -279,6 +295,8 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 9000,
+            "totalTime": 90.45,
             "flights": [
                 {
                     "id": 71,
@@ -329,6 +347,8 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 24000,
+            "totalTime": 99.45,
             "flights": [
                 {
                     "id": 81,
@@ -337,10 +357,14 @@
                     "departure": "10:45",
                     "arrival": "08:00",
                     "duration": {
-                        "hours": 5,
+                        "hours": 44,
                         "minutes": 15
                     },
-                    "transfers": [],
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
                     "price": 12000
                 },
                 {
@@ -350,10 +374,14 @@
                     "departure": "11:20",
                     "arrival": "00:50",
                     "duration": {
-                        "hours": 5,
+                        "hours": 55,
                         "minutes": 30
                     },
-                    "transfers": [],
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
                     "price": 12000
                 }
             ]
@@ -365,9 +393,49 @@
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 24000,
+            "totalTime": 99.45,
             "flights": [
                 {
                     "id": 91,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 44,
+                        "minutes": 15
+                    },
+                    "transfers": [],
+                    "price": 12000
+                },
+                {
+                    "id": 92,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 55,
+                        "minutes": 30
+                    },
+                    "transfers": [],
+                    "price": 12000
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "airline": "AIRLINE FOR EUROPE",
+            "logo": "@/assets/main-logo.svg",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 6000,
+            "totalTime": 100.45,
+            "flights": [
+                {
+                    "id": 101,
                     "origin": "LHR",
                     "destination": "DXB",
                     "departure": "10:45",
@@ -390,7 +458,7 @@
                     "price": 3000
                 },
                 {
-                    "id": 92,
+                    "id": 102,
                     "origin": "DXB",
                     "destination": "LHR",
                     "departure": "11:20",
@@ -415,15 +483,218 @@
             ]
         },
         {
-            "id": 10,
+            "id": 11,
+            "airline": "AIRLINE FOR EUROPE",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 13300,
+            "totalTime": 51,
+            "flights": [
+                {
+                    "id": 111,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 34,
+                        "minutes": 15
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
+                    "price": 6650
+                },
+                {
+                    "id": 112,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 16,
+                        "minutes": 30
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
+                    "price": 6650
+                }
+            ]
+        },
+        {
+            "id": 12,
             "airline": "AIRLINE FOR EUROPE",
             "logo": "@/assets/main-logo.svg",
             "origin": "LHR",
             "destination": "DXB",
             "currency": "USD",
+            "totalSum": 15100,
+            "totalTime": 57.45,
             "flights": [
                 {
-                    "id": 101,
+                    "id": 121,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 17,
+                        "minutes": 15
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        },
+                        {
+                            "airport": "JNB"
+                        }
+                    ],
+                    "price": 7550
+                },
+                {
+                    "id": 122,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 40,
+                        "minutes": 30
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        },
+                        {
+                            "airport": "JNB"
+                        }
+                    ],
+                    "price": 7550
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "airline": "AIRLINE FOR EUROPE",
+            "logo": "@/assets/main-logo.svg",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 15400,
+            "totalTime": 33.45,
+            "flights": [
+                {
+                    "id": 131,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 20,
+                        "minutes": 15
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
+                    "price": 7700
+                },
+                {
+                    "id": 132,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 13,
+                        "minutes": 30
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
+                    "price": 7700
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "airline": "AIRLINE FOR EUROPE",
+            "logo": "@/assets/main-logo.svg",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 21400,
+            "totalTime": 34.45,
+            "flights": [
+                {
+                    "id": 141,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 21,
+                        "minutes": 15
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        },
+                        {
+                            "airport": "JNB"
+                        },
+                        {
+                            "airport": "JNB"
+                        }
+                    ],
+                    "price": 10700
+                },
+                {
+                    "id": 142,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 13,
+                        "minutes": 30
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        },
+                        {
+                            "airport": "JNB"
+                        },
+                        {
+                            "airport": "JNB"
+                        }
+                    ],
+                    "price": 10700
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "airline": "AIRLINE FOR EUROPE",
+            "logo": "@/assets/main-logo.svg",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 23900,
+            "totalTime": 20.45,
+            "flights": [
+                {
+                    "id": 151,
                     "origin": "LHR",
                     "destination": "DXB",
                     "departure": "10:45",
@@ -433,10 +704,10 @@
                         "minutes": 15
                     },
                     "transfers": [],
-                    "price": 15000
+                    "price": 11950
                 },
                 {
-                    "id": 102,
+                    "id": 152,
                     "origin": "DXB",
                     "destination": "LHR",
                     "departure": "11:20",
@@ -446,7 +717,243 @@
                         "minutes": 30
                     },
                     "transfers": [],
-                    "price": 15000
+                    "price": 11950
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "airline": "AIRLINE FOR EUROPE",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 10300,
+            "totalTime": 21.45,
+            "flights": [
+                {
+                    "id": 161,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 5,
+                        "minutes": 15
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
+                    "price": 5000
+                },
+                {
+                    "id": 162,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 16,
+                        "minutes": 30
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
+                    "price": 5300
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "airline": "AIRLINE FOR EUROPE",
+            "logo": "@/assets/main-logo.svg",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 9000,
+            "totalTime": 90.45,
+            "flights": [
+                {
+                    "id": 171,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 50,
+                        "minutes": 15
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        },
+                        {
+                            "airport": "JNB"
+                        }
+                    ],
+                    "price": 4500
+                },
+                {
+                    "id": 172,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 40,
+                        "minutes": 30
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        },
+                        {
+                            "airport": "JNB"
+                        }
+                    ],
+                    "price": 4500
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "airline": "AIRLINE FOR EUROPE",
+            "logo": "@/assets/main-logo.svg",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 24000,
+            "totalTime": 99.45,
+            "flights": [
+                {
+                    "id": 181,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 44,
+                        "minutes": 15
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
+                    "price": 12000
+                },
+                {
+                    "id": 182,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 55,
+                        "minutes": 30
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        }
+                    ],
+                    "price": 12000
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "airline": "AIRLINE FOR EUROPE",
+            "logo": "@/assets/main-logo.svg",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 24000,
+            "totalTime": 99.45,
+            "flights": [
+                {
+                    "id": 191,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 44,
+                        "minutes": 15
+                    },
+                    "transfers": [],
+                    "price": 12000
+                },
+                {
+                    "id": 192,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 55,
+                        "minutes": 30
+                    },
+                    "transfers": [],
+                    "price": 12000
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "airline": "AIRLINE FOR EUROPE",
+            "logo": "@/assets/main-logo.svg",
+            "origin": "LHR",
+            "destination": "DXB",
+            "currency": "USD",
+            "totalSum": 6000,
+            "totalTime": 100.45,
+            "flights": [
+                {
+                    "id": 201,
+                    "origin": "LHR",
+                    "destination": "DXB",
+                    "departure": "10:45",
+                    "arrival": "08:00",
+                    "duration": {
+                        "hours": 50,
+                        "minutes": 15
+                    },
+                    "transfers": [
+                        {
+                            "airport": "JNB"
+                        },
+                        {
+                            "airport": "JNB"
+                        }
+                    ],
+                    "price": 3000
+                },
+                {
+                    "id": 202,
+                    "origin": "DXB",
+                    "destination": "LHR",
+                    "departure": "11:20",
+                    "arrival": "00:50",
+                    "duration": {
+                        "hours": 50,
+                        "minutes": 30
+                    },
+                    "transfers": [
+                        {
+                            "airport": "HKG"
+                        },
+                        {
+                            "airport": "JNB"
+                        },
+                        {
+                            "airport": "JNB"
+                        }
+                    ],
+                    "price": 3000
                 }
             ]
         }

@@ -4,6 +4,8 @@ export type AirlineData = {
   origin: string;
   destination: string;
   currency: string;
+  totalSum: number;
+  totalTime: number;
   flights: Flight[];
 };
 
@@ -26,4 +28,3 @@ type Duration = {
   hours: number;
   minutes: number;
 };
-
