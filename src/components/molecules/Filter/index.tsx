@@ -1,6 +1,11 @@
 import { FilterOption } from "@/components/atoms/FilterOption";
 import { useDispatch, useSelector } from "react-redux";
-import { changeFilter, filterSelector } from "@/store/filter-slice";
+import {
+  FilterValue,
+  changeFilter,
+  filterSelector,
+} from "@/store/filter-slice";
+import { applyFilter } from "@/store/airline-slice";
 import "./index.sass";
 
 export const Filter = () => {
@@ -9,6 +14,7 @@ export const Filter = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(changeFilter(e.target.value));
+    dispatch(applyFilter(e.target.value as FilterValue));
   };
 
   return (

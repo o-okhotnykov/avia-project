@@ -23,10 +23,10 @@ export const sortSlice = createSlice({
   name: "sort",
   initialState,
   reducers: {
-    changeSort(state: ISort[], action: PayloadAction<number>) {
-      state = state.map((item, index) => {
+    changeSort(state: ISort[], action: PayloadAction<SortValue>) {
+      state = state.map((item) => {
         item.checked = false;
-        if (index === action.payload) {
+        if (item.value === action.payload) {
           item.checked = true;
         }
         return item;

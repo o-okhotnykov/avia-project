@@ -1,24 +1,28 @@
 import { useDispatch, useSelector } from "react-redux";
 import { SortOption } from "../../atoms/SortOption";
-import { changeSort, sortOptionsSelector } from "@/store/sort-slice";
+import { SortValue, changeSort, sortOptionsSelector } from "@/store/sort-slice";
 import "./index.sass";
+import { applySort } from "@/store/airline-slice";
 
 export const Sort = () => {
   const sortOptions = useSelector(sortOptionsSelector);
   const dispatch = useDispatch();
 
-  const handleClick = (index: number) => {
-    dispatch(changeSort(index));
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const element = e.currentTarget as HTMLInputElement;
+    dispatch(changeSort(element.value as SortValue));
+    dispatch(applySort(element.value as SortValue));
   };
-  
+
   return (
     <ul className="sort">
-      {sortOptions.map(({ title, checked }, index) => (
+      {sortOptions.map(({ title, checked, value }) => (
         <SortOption
           title={title}
           key={title}
           checked={checked}
-          onClick={() => handleClick(index)}
+          value={value}
+          onClick={handleClick}
         />
       ))}
     </ul>
